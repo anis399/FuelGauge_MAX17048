@@ -74,6 +74,14 @@
 // [USART0]$
 
 // $[USART1]
+// USART1 RX on PA06
+#define USART1_RX_PORT                           gpioPortA
+#define USART1_RX_PIN                            6
+
+// USART1 TX on PA05
+#define USART1_TX_PORT                           gpioPortA
+#define USART1_TX_PIN                            5
+
 // [USART1]$
 
 // $[I2C1]

@@ -10,5 +10,6 @@ void sl_platform_process_action(void);
 void sl_service_process_action(void);
 void sl_stack_process_action(void);
 void sl_internal_app_process_action(void);
+void sl_iostream_init_instances(void);
 
 #endif // SL_EVENT_HANDLER_H

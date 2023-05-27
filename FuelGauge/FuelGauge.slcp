@@ -24,9 +24,13 @@ sdk: {id: gecko_sdk, version: 4.2.3}
 toolchain_settings: []
 component:
 - {id: BGM220PC22HNA}
+- {id: printf}
 - {id: sl_system}
 - {id: device_init}
+- instance: [vcom]
+  id: iostream_usart
 - {id: brd4314a}
+- {id: iostream_usart_core}
 define:
 - {name: DEBUG_EFM}
 ui_hints: {}

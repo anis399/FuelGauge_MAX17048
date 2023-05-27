@@ -7,6 +7,11 @@
     <file name="sl_device_init_clocks.c" builtin="true" generated="true"/>
     <file name="sl_event_handler.h" builtin="true" generated="true"/>
     <file name="sl_event_handler.c" builtin="true" generated="true"/>
+    <file name="sl_iostream_handles.h" builtin="true" generated="true"/>
+    <file name="sl_iostream_handles.c" builtin="true" generated="true"/>
+    <file name="sl_iostream_init_instances.h" builtin="true" generated="true"/>
+    <file name="sl_iostream_init_usart_instances.c" builtin="true" generated="true"/>
+    <file name="sl_iostream_init_usart_instances.h" builtin="true" generated="true"/>
     <file name="linkerfile.ld" builtin="true" generated="true"/>
   </folder>
   <includePath uri="studio:/project/autogen"/>

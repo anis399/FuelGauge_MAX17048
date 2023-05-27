@@ -54,6 +54,30 @@
           </folder>
         </folder>
       </folder>
+      <folder name="common">
+        <folder name="inc">
+          <file name="sl_atomic.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_atomic.h"/>
+          <file name="sl_enum.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_enum.h"/>
+          <file name="sl_assert.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_assert.h"/>
+          <file name="sl_common.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_common.h"/>
+          <file name="sl_string.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_string.h"/>
+          <file name="sl_status.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_status.h"/>
+        </folder>
+        <folder name="src">
+          <file name="sl_assert.c" linked="false" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
+          <file name="sl_string.c" linked="false" uri="studio:/sdk/platform/common/src/sl_string.c"/>
+        </folder>
+        <folder name="toolchain">
+          <folder name="src">
+            <file name="sl_memory.c" linked="false" uri="studio:/sdk/platform/common/toolchain/src/sl_memory.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_memory_region.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_memory_region.h"/>
+            <file name="sl_memory.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_memory.h"/>
+            <file name="sl_gcc_preinclude.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_gcc_preinclude.h"/>
+          </folder>
+        </folder>
+      </folder>
       <folder name="CMSIS">
         <folder name="Core">
           <folder name="Include">
@@ -84,6 +108,19 @@
             <file name="sl_device_init_nvic.c" linked="false" uri="studio:/sdk/platform/service/device_init/src/sl_device_init_nvic.c"/>
           </folder>
         </folder>
+        <folder name="iostream">
+          <folder name="src">
+            <file name="sl_iostream.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream.c"/>
+            <file name="sl_iostream_uart.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_uart.c"/>
+            <file name="sl_iostream_usart.c" linked="false" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_usart.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_iostream.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream.h"/>
+            <file name="sl_iostream_uart.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_uart.h"/>
+            <file name="sli_iostream_uart.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sli_iostream_uart.h"/>
+            <file name="sl_iostream_usart.h" linked="false" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_usart.h"/>
+          </folder>
+        </folder>
         <folder name="system">
           <folder name="src">
             <file name="sl_system_init.c" linked="false" uri="studio:/sdk/platform/service/system/src/sl_system_init.c"/>
@@ -92,6 +129,21 @@
           <folder name="inc">
             <file name="sl_system_init.h" linked="false" uri="studio:/sdk/platform/service/system/inc/sl_system_init.h"/>
             <file name="sl_system_process_action.h" linked="false" uri="studio:/sdk/platform/service/system/inc/sl_system_process_action.h"/>
+          </folder>
+        </folder>
+      </folder>
+      <folder name="emdrv">
+        <folder name="dmadrv">
+          <folder name="src">
+            <file name="dmadrv.c" linked="false" uri="studio:/sdk/platform/emdrv/dmadrv/src/dmadrv.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="dmadrv.h" linked="false" uri="studio:/sdk/platform/emdrv/dmadrv/inc/dmadrv.h"/>
+          </folder>
+        </folder>
+        <folder name="common">
+          <folder name="inc">
+            <file name="ecode.h" linked="false" uri="studio:/sdk/platform/emdrv/common/inc/ecode.h"/>
           </folder>
         </folder>
       </folder>
@@ -109,39 +161,22 @@
           <file name="em_core.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_core.h"/>
           <file name="em_emu.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_emu.h"/>
           <file name="em_gpio.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_gpio.h"/>
+          <file name="em_ldma.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_ldma.h"/>
           <file name="em_msc.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_msc.h"/>
           <file name="em_msc_compat.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_msc_compat.h"/>
           <file name="em_syscfg.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_syscfg.h"/>
           <file name="em_system.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_system.h"/>
+          <file name="em_usart.h" linked="false" uri="studio:/sdk/platform/emlib/inc/em_usart.h"/>
         </folder>
         <folder name="src">
           <file name="em_cmu.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_cmu.c"/>
           <file name="em_core.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_core.c"/>
           <file name="em_emu.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_emu.c"/>
           <file name="em_gpio.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_gpio.c"/>
+          <file name="em_ldma.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_ldma.c"/>
           <file name="em_msc.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_msc.c"/>
           <file name="em_system.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_system.c"/>
-        </folder>
-      </folder>
-      <folder name="common">
-        <folder name="inc">
-          <file name="sl_enum.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_enum.h"/>
-          <file name="sl_assert.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_assert.h"/>
-          <file name="sl_common.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_common.h"/>
-          <file name="sl_status.h" linked="false" uri="studio:/sdk/platform/common/inc/sl_status.h"/>
-        </folder>
-        <folder name="src">
-          <file name="sl_assert.c" linked="false" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
-        </folder>
-        <folder name="toolchain">
-          <folder name="src">
-            <file name="sl_memory.c" linked="false" uri="studio:/sdk/platform/common/toolchain/src/sl_memory.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="sl_memory_region.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_memory_region.h"/>
-            <file name="sl_memory.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_memory.h"/>
-            <file name="sl_gcc_preinclude.h" linked="false" uri="studio:/sdk/platform/common/toolchain/inc/sl_gcc_preinclude.h"/>
-          </folder>
+          <file name="em_usart.c" linked="false" uri="studio:/sdk/platform/emlib/src/em_usart.c"/>
         </folder>
       </folder>
     </folder>
@@ -157,17 +192,34 @@
         </folder>
       </folder>
     </folder>
+    <folder name="util">
+      <folder name="third_party">
+        <folder name="printf">
+          <folder name="src">
+            <file name="iostream_printf.c" linked="false" uri="studio:/sdk/util/third_party/printf/src/iostream_printf.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="iostream_printf.h" linked="false" uri="studio:/sdk/util/third_party/printf/inc/iostream_printf.h"/>
+          </folder>
+          <file name="printf.c" linked="false" uri="studio:/sdk/util/third_party/printf/printf.c"/>
+          <file name="printf.h" linked="false" uri="studio:/sdk/util/third_party/printf/printf.h"/>
+        </folder>
+      </folder>
+    </folder>
   </folder>
-  <file name="app.c" linked="false" uri="studio:/sdk/app/common/example/empty/app.c"/>
-  <file name="main.c" linked="false" uri="studio:/sdk/app/common/example/empty/main.c"/>
-  <file name="app.h" linked="false" uri="studio:/sdk/app/common/example/empty/app.h"/>
+  <file name="app.h" linked="false" uri="studio:/project/app.h"/>
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/Device/SiliconLabs/BGM22/Include"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/common/inc"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/hardware/board/inc"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/CMSIS/Core/Include"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/service/device_init/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/emdrv/dmadrv/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/emdrv/common/inc"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/emlib/inc"/>
-  <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/common/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/service/iostream/inc"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/util/third_party/printf"/>
+  <includePath uri="studio:/project/gecko_sdk_4.2.3/util/third_party/printf/inc"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/common/toolchain/inc"/>
   <includePath uri="studio:/project/gecko_sdk_4.2.3/platform/service/system/inc"/>
   <macroDefinition name="DEBUG_EFM"/>
@@ -254,11 +306,15 @@
   <toolOption toolId="studio.ide.project" optionId="device_opn" value="bgm220pc22hna"/>
   <toolOption toolId="makefile.arm.gcc.compiler" optionId="misc">
     <toolListOption value="-mcmse"/>
+    <toolListOption value="-fno-builtin-printf"/>
+    <toolListOption value="-fno-builtin-sprintf"/>
     <toolListOption value="--specs=nano.specs"/>
     <toolListOption value="-g"/>
   </toolOption>
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.compiler.base" optionId="com.silabs.gnu.c.compiler.option.misc.otherlist">
     <toolListOption value="-mcmse"/>
+    <toolListOption value="-fno-builtin-printf"/>
+    <toolListOption value="-fno-builtin-sprintf"/>
     <toolListOption value="--specs=nano.specs"/>
     <toolListOption value="-c"/>
     <toolListOption value="-fmessage-length=0"/>

@@ -1,4 +1,4 @@
-IO Stream:
+IO Stream->Driver->IO Stream USART:
 	USART (USART0 PA05->Tx PA06->Rx)
 
 Tiny Printf
