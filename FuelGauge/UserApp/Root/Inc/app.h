@@ -52,7 +52,7 @@
 #include "em_cmu.h"    /* Clock Management Unit     */
 
 //Components
-#include "printf.h"
+
 
 //Custom
 #include "FuelGauge.h"    /* Projects settings and configurations */

@@ -50,8 +50,13 @@
  ******************************************************************************/
 void app_init(void)
 {
-  printf("FuelGauge (MAX17048) project\n");
+  printf("\nFuelGauge (MAX17048) project\n");
   MAX17048_IsConnected();
+  MAX17048_Config();
+  MAX17048_GetBat_CellVoltage();
+  MAX17048_GetBat_StateOfCharge();
+  MAX17048_GetAlerts();
+  MAX17048_ResetAlerts();
 }
 
 /*******************************************************************************
