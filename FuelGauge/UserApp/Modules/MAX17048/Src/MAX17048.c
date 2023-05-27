@@ -22,7 +22,44 @@
 /*******************************************************************************
  * Interface Functions
  ******************************************************************************/
+/******************************************************************************
+ * Function name:
+ *
+ * Description :
+ * Parameters   :
+ * Returns      :
+ *
+ * Known issues :
+ * Note         :
+ *
+ * ****************************************************************************/
+RetVal_t MAX17048_IsConnected(void)
+{
+  RetVal_t funcRet = FuncSuccess, ret;
 
+  uint8_t TxBuf[1] = {MAX17048_VERSION_REG};
+  uint8_t RxBuf[2] = {0};
+
+  ret = I2C_D_WriteRead(MAX17048_ADDRESS << 1, TxBuf, 1, RxBuf, 2);
+  if(ret == FuncSuccess)
+    {
+      uint16_t version = ((uint16_t)RxBuf[0] << 8) | ((uint16_t)RxBuf[1]);
+
+#ifdef DEBUG_MAX17048
+      printf("MAX17048 IsConnected: device ID %ld\n", version);
+#endif
+      funcRet =  FuncSuccess;
+    }
+
+  else
+    {
+#ifdef DEBUG_MAX17048
+      printf("MAX17048 IsConnected: not connected\n");
+#endif
+      funcRet =  FuncSuccess;
+    }
+  return funcRet;
+}
 
 /*******************************************************************************
  * Private Functions
@@ -31,11 +68,11 @@
  * Function name:
  *
  * Description :
-* Parameters   :
-* Returns      :
-*
-* Known issues :
-* Note         :
-*
-* ****************************************************************************/
+ * Parameters   :
+ * Returns      :
+ *
+ * Known issues :
+ * Note         :
+ *
+ * ****************************************************************************/
 

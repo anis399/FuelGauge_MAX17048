@@ -65,9 +65,12 @@
 
 //********************************** DEBUG ON **********************************
 
-#define DEBUG_I2C                 /**< Basic debug messages over I2C >*/
-#define DEBUG_I2C_FUNCSUCCESS     /**< Debug messages over I2C when functions success >*/
-#define DEBUG_I2C_FUNCFAILED      /**< Debug messages over I2C when functions fail >*/
+#define DEBUG_I2C                 /**< Basic debug messages over I2C */
+#define DEBUG_I2C_TRANSFER_RETURN /**< I2C internal return           */
+#define DEBUG_I2C_FUNCSUCCESS     /**< Debug messages over I2C when functions success */
+#define DEBUG_I2C_FUNCFAILED      /**< Debug messages over I2C when functions fail    */
+
+#define DEBUG_MAX17048
 
 /*******************************************************************************
  * Typedef & Enums

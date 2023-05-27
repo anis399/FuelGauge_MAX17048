@@ -51,7 +51,7 @@
 void app_init(void)
 {
   printf("FuelGauge (MAX17048) project\n");
-
+  MAX17048_IsConnected();
 }
 
 /*******************************************************************************

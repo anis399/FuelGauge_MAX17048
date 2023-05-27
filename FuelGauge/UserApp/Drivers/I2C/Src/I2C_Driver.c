@@ -61,7 +61,7 @@ RetVal_t I2C_D_Write(uint16_t Slave_Add, uint8_t* TxBuf, uint8_t TxLen)
 
   ret = I2CSPM_Transfer(I2C_HANDLE, &seq);
 
-#ifdef DEBUG_ON_I2C_DRIVER
+#ifdef DEBUG_I2C_TRANSFER_RETURN
   I2C_D_Debug_Ecode(ret);
 #endif
 
@@ -94,7 +94,7 @@ RetVal_t I2C_D_WriteRead(uint16_t Slave_Add, uint8_t* TxBuf, uint8_t TxLen, uint
 
   ret = I2CSPM_Transfer(I2C_HANDLE, &seq);
 
-#ifdef DEBUG_ON_I2C_DRIVER
+#ifdef DEBUG_I2C_TRANSFER_RETURN
   I2C_D_Debug_Ecode(ret);
 #endif
 

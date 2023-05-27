@@ -56,7 +56,7 @@
 
 //Custom
 #include "FuelGauge.h"    /* Projects settings and configurations */
-
+#include "MAX17048.h"     /* fuel gauge module */
 
 /*******************************************************************************
  * Macros
