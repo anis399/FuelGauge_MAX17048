@@ -1,19 +1,3 @@
-/***************************************************************************//**
- * @file
- * @brief Top level application functions
- *******************************************************************************
- * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
- *******************************************************************************
- *
- * The licensor of this software is Silicon Laboratories Inc. Your use of this
- * software is governed by the terms of Silicon Labs Master Software License
- * Agreement (MSLA) available at
- * www.silabs.com/about-us/legal/master-software-license-agreement. This
- * software is distributed to you in Source Code format and is governed by the
- * sections of the MSLA applicable to Source Code.
- *
- ******************************************************************************/
 /*******************************************************************************
 *                     _           _           _    _                           *
 *         /\         (_)         | |         | |  | |                          *
@@ -24,7 +8,7 @@
 *                                                                              *
 *******************************************************************************/
 /*******************************************************************************
- * File Template.h
+ * File MAX17408.h
  *
  *  Created on: May 27, 2023
  *  Author: Anis Shakkour
@@ -34,29 +18,24 @@
  *  @note  :
  *  @todo  :
  *
+ *
+ * For more information on MAX17048,
+ *    please refer to the "https://www.analog.com/media/en/technical-documentation/data-sheets/max17048-max17049.pdf".
+ *
 *******************************************************************************/
 
 /******************************************************************************
  * Multiple include protection
  *****************************************************************************/
-#ifndef APP_H
-#define APP_H
+#ifndef MAX17048_H_
+#define MAX17048_H_
 
 /*******************************************************************************
  * Includes
  ******************************************************************************/
-//MCU
-#include "stdio.h"     /* */
-#include "em_common.h" /* General purpose utilities */
-#include "em_emu.h"    /* Energy Management Unit    */
-#include "em_cmu.h"    /* Clock Management Unit     */
-
-//Components
-#include "printf.h"
-
-//Custom
 #include "FuelGauge.h"    /* Projects settings and configurations */
 
+#include "I2C_Driver.h"
 
 /*******************************************************************************
  * Macros
@@ -65,6 +44,8 @@
 /*******************************************************************************
  * Defines
  ******************************************************************************/
+#define MAX17048_ADDRESS 0x36     //Unshifted I2C address. Becomes 0x6C for write and 0x6D for read.
+
 
 /*******************************************************************************
  * Typedef & Enums
@@ -77,10 +58,8 @@
 /*******************************************************************************
  * Interface Functions
  ******************************************************************************/
-void app_init(void);
-void app_process_action(void);
 
 /*******************************************************************************
  * END
  ******************************************************************************/
-#endif  /* APP_H */
+#endif /* MAX17048_H_ */

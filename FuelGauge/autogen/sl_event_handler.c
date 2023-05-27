@@ -9,6 +9,7 @@
 #include "sl_device_init_clocks.h"
 #include "sl_device_init_emu.h"
 #include "sl_board_control.h"
+#include "sl_i2cspm_instances.h"
 #include "sl_iostream_init_usart_instances.h"
 #include "sl_iostream_init_instances.h"
 
@@ -27,6 +28,7 @@ void sl_platform_init(void)
 
 void sl_driver_init(void)
 {
+  sl_i2cspm_init_instances();
 }
 
 void sl_service_init(void)

@@ -24,6 +24,8 @@ sdk: {id: gecko_sdk, version: 4.2.3}
 toolchain_settings: []
 component:
 - {id: BGM220PC22HNA}
+- instance: [I2C_Component_Handle]
+  id: i2cspm
 - {id: printf}
 - {id: sl_system}
 - {id: device_init}

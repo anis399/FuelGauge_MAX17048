@@ -1,4 +1,7 @@
 IO Stream->Driver->IO Stream USART:
-	USART (USART0 PA05->Tx PA06->Rx)
+	USART (USART0 PA05->Tx PA06->Rx), Component name->vcom, 115200, no CTS
 
 Tiny Printf
+
+Driver->I2C->I2CSPM
+	I2C0 (PD02->SCL PD03->SDA), Component name->I2C_Component_Handle, Stadard speed 100kbit/s
