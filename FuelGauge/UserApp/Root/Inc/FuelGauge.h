@@ -65,22 +65,28 @@
  ******************************************************************************/
 
 //********************************** DEBUG ON **********************************
+#define DEBUG_GPIO                1
+
 
 #define DEBUG_I2C                 /**< Basic debug messages over I2C */
 #define DEBUG_I2C_TRANSFER_RETURN /**< I2C internal return           */
 #define DEBUG_I2C_FUNCSUCCESS     /**< Debug messages over I2C when functions success */
 #define DEBUG_I2C_FUNCFAILED      /**< Debug messages over I2C when functions fail    */
 
-#define DEBUG_MAX17048
+#define DEBUG_MAX17048                 1
+#define DEBUG_MAX17048_FUNCSUCCESS     1    /**< Debug messages over I2C when functions success */
+#define DEBUG_MAX17048_FUNCFAILED      1    /**< Debug messages over I2C when functions fail */
+
+
 
 /*******************************************************************************
  * Typedef & Enums
  ******************************************************************************/
 typedef enum{
-  FuncSuccess   ,
-  FuncFailed    ,
-  FuncOnGoing   ,
-  FuncTimeOut   ,
+  FuncFailed    = 0 ,
+  FuncSuccess   = 1 ,
+  FuncOnGoing   = 2 ,
+  FuncTimeOut   = 3 ,
 
 }RetVal_t ;
 

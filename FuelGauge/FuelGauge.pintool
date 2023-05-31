@@ -4,6 +4,8 @@
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="I2C0" propertyId="ABModule.selectedRequirement" value="i2c%T%SL_I2CSPM_I2C_COMPONENT_HANDLE%T%sl_i2cspm_I2C_Component_Handle_config.h"/>
     <property object="I2C0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="PD02" propertyId="pin.name" value="SCL"/>
+    <property object="PD03" propertyId="pin.name" value="SDA"/>
     <property object="PORTIO" propertyId="portio.i2c0.enable.scl" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.i2c0.enable.sda" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.i2c0.location.scl" value="50"/>

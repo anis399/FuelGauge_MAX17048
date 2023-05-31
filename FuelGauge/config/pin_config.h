@@ -117,6 +117,12 @@
 // [MODEM]$
 
 // $[CUSTOM_PIN_NAME]
+#define SCL_PORT                                 gpioPortD
+#define SCL_PIN                                  2
+
+#define SDA_PORT                                 gpioPortD
+#define SDA_PIN                                  3
+
 // [CUSTOM_PIN_NAME]$
 
 #endif // PIN_CONFIG_H

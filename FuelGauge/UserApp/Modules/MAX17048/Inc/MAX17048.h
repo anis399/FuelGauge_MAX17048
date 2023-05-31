@@ -42,8 +42,10 @@
  * Includes
  ******************************************************************************/
 #include "FuelGauge.h"    /* Projects settings and configurations */
+#include "app.h"
 
 #include "I2C_Driver.h"   /* I2C driver */
+#include "GPIO_Driver.h"  /* GPIO driver */
 
 /*******************************************************************************
  * Macros
@@ -53,6 +55,7 @@
 /*******************************************************************************
  * Defines
  ******************************************************************************/
+#define BATTERY_SOC_SAMPLE_PERIOD                 ((uint32_t)10 * 1000) //[ms]
 #define BATTERY_MIN_VAL                           ((float)3.125)
 #define BATTERY_MAX_VAL                           ((float)4.210)
 #define BATTERY_EMPTY_THRESHOLD_ALERT_PERCENTAGE  ((uint8_t)25) // possible values [1-30]%
@@ -129,19 +132,21 @@ typedef struct {
 /*******************************************************************************
  * Private Functions
  ******************************************************************************/
+static RetVal_t MAX17048_GetBat_StateOfCharge(float* batSOC);
+static RetVal_t MAX17048_GetBat_CellVoltage(float* batVCELL);
+static bool MAX17048_requestingINT(void);
+static RetVal_t MAX17048_GetAlerts(uint16_t* alerts);
+static RetVal_t MAX17048_AlertsHandler(uint16_t alert);
+static RetVal_t MAX17048_ResetAlerts(void);
 
 /*******************************************************************************
  * Interface Functions
  ******************************************************************************/
-RetVal_t MAX17048_Config(void);
-
 RetVal_t MAX17048_IsConnected(void);
-RetVal_t MAX17048_GetBat_StateOfCharge(void);
-RetVal_t MAX17048_GetBat_CellVoltage(void);
-RetVal_t MAX17048_GetAlerts(void);
-RetVal_t MAX17048_AlertsHandler(uint16_t alert);
+RetVal_t MAX17048_Config(void);
+RetVal_t MAX17084_MonitorAlerts(void);
+RetVal_t MAX17084_MonitorSOC(void);
 
-RetVal_t MAX17048_ResetAlerts(void);
 /*******************************************************************************
  * END
  ******************************************************************************/

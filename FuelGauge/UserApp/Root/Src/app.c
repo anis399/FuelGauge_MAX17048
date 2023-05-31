@@ -30,6 +30,7 @@
 /*******************************************************************************
  * Data types
  ******************************************************************************/
+volatile uint32_t sysTick = 0;
 
 /*******************************************************************************
  * Extern
@@ -51,12 +52,10 @@
 void app_init(void)
 {
   printf("\nFuelGauge (MAX17048) project\n");
-  MAX17048_IsConnected();
+  while(SysTick_Config(SystemCoreClock / 1000) != 0);
+  GPIO_D_Config();
   MAX17048_Config();
-  MAX17048_GetBat_CellVoltage();
-  MAX17048_GetBat_StateOfCharge();
-  MAX17048_GetAlerts();
-  MAX17048_ResetAlerts();
+
 }
 
 /*******************************************************************************
@@ -71,10 +70,12 @@ void app_init(void)
  ******************************************************************************/
 void app_process_action(void)
 {
+  RetVal_t FuncRet;
+
+  FuncRet = MAX17084_MonitorSOC();
+  FuncRet = MAX17084_MonitorAlerts();
 
 }
-
-
 
 /*******************************************************************************
  * Private Functions
@@ -89,3 +90,13 @@ void app_process_action(void)
  * Known issues :
  * Note         :
  ******************************************************************************/
+void SysTick_Handler(void)
+{
+
+  sysTick++;
+  if(!sysTick) //to disable Zero-devision
+    {
+      sysTick++;
+    }
+}
+
